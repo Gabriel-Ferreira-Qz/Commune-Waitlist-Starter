@@ -1,0 +1,58 @@
+@import '../abstract/_variaveis'
+
+@mixin margin-center($margin-top, $margin-bottom, $width)
+    margin: $margin-top auto $margin-bottom
+    width: $width
+
+form 
+    text-align: center
+    padding-top: 1em 
+    input 
+        @include margin-center(1em , .5em , 90% )
+        display: block
+        padding: 1em 0
+        border: 1px solid #E3E3E3
+        border-radius: 4px
+        &::placeholder
+            padding-left: 1.5em
+            color: #B6B6B6
+    button
+        @include margin-center(0 , 0 , 90% )
+        padding: 1em 0
+        background-color: $cor-secundaria
+        color: #FFF
+        border: none
+        border-radius: 4px
+        cursor: pointer
+
+@media screen and (min-width: $tablet)
+    form
+        @include margin-center(0 , 0 , 65% )
+        text-align: start
+        input 
+            display: inline
+            width: 65%
+            margin: 1em 0.5em 0 0
+            padding: 1.5em 0
+            &::placeholder
+                font-size: $tamanho-da-fonte
+        button
+            width: 30%
+            padding: 18px 0
+            font-size: $tamanho-da-fonte
+
+@media screen and (min-width: $desktop)
+    form
+        text-align: start
+        width: 90%
+        margin: 0 auto 0 0
+        input
+            width: 50%
+            margin: 0 1em 0 0 
+        button
+            width: 20%
+
+    
+
+    
+

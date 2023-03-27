@@ -1,0 +1,70 @@
+@import '../abstract/_variaveis'
+
+@mixin hamburger($url-image, $repeat, $position)
+    background-image: url($url-image)
+    background-repeat: $repeat
+    background-position: $position
+    display: inline-block
+    width: 32px
+    height: 24px
+
+@mixin link ($link-cor, $decoration, $weight)
+    color: $link-cor
+    text-decoration: $decoration
+    font-weight: $weight
+    
+header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding: 0 1rem 0 1rem
+    .container
+        display: flex
+        align-items: center
+        input
+            display: none
+            &:checked~ul
+                display: block
+        span
+            @include hamburger("../Assets/Hamburger.svg", no-repeat, center)
+        ul
+            position: absolute
+            top: 100%
+            left: 0%
+            width: 100%
+            display: none
+            text-align: center
+            background-color: $cor-principal
+            li:nth-child(5) a
+                background-color: $cor-secundaria
+                color: #FFF
+            a 
+                display: inline-block
+                width: 100%
+                padding: 16px 0 16px
+                @include link ($cor-texto, none , 400 )
+
+@media screen and (min-width: $desktop)
+    header
+        padding: 0
+        .container
+            input
+            span
+                display: none
+            ul
+                position: initial
+                display: flex
+                gap: 16px
+                li:nth-child(5) a
+                    padding: 1em .5em
+                    border-radius: 4px
+
+
+                
+
+            
+
+        
+        
+        

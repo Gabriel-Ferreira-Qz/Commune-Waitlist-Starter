@@ -1,0 +1,16 @@
+@import '../abstract/_variaveis'
+
+@mixin margin-center($margin-top, $margin-bottom, $width)
+    margin: $margin-top auto $margin-bottom
+    width: $width
+
+footer
+    @include margin-center(0 , 0 , 90% )
+    p
+        font-weight: 700
+        color: $cor-texto
+        margin: 2em 0 1em
+    div 
+        display: flex
+        flex-wrap: wrap
+        gap: 12px

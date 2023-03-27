@@ -1,0 +1,248 @@
+body {
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #FFF;
+}
+body .card {
+  background-color: #F6F9FE;
+  margin: 1em;
+  border-radius: 8px;
+  padding: 3em 0;
+}
+
+@media screen and (min-width: 1220px) {
+  body .card {
+    padding: 3em 6em;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem 0 1rem;
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .container input {
+  display: none;
+}
+header .container input:checked ~ ul {
+  display: block;
+}
+header .container span {
+  background-image: url("../Assets/Hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 32px;
+  height: 24px;
+}
+header .container ul {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  display: none;
+  text-align: center;
+  background-color: #F6F9FE;
+}
+header .container ul li:nth-child(5) a {
+  background-color: #372865;
+  color: #FFF;
+}
+header .container ul a {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 0 16px;
+  color: #545454;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1220px) {
+  header {
+    padding: 0;
+  }
+  header .container span {
+    display: none;
+  }
+  header .container ul {
+    position: initial;
+    display: flex;
+    gap: 16px;
+  }
+  header .container ul li:nth-child(5) a {
+    padding: 1em 0.5em;
+    border-radius: 4px;
+  }
+}
+main .descricao {
+  text-align: center;
+}
+main .descricao .descricao__acesso {
+  margin: 3em auto 0;
+  width: 80%;
+  padding: 4px 16px;
+  border-radius: 40px;
+  background-color: #372865;
+  color: #CCC1E6;
+  font-weight: 300;
+  line-height: 25px;
+}
+main .descricao .descricao__acesso a {
+  color: #CCC1E6;
+  text-decoration: underline;
+  font-weight: 400;
+}
+main .descricao .descricao__titulo {
+  margin: 24px auto 24px;
+  width: 80%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 45px;
+  color: #353252;
+}
+main .descricao .descricao__texto {
+  margin: 0 auto 0;
+  width: 90%;
+  color: #545454;
+  line-height: 25px;
+}
+main img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .descricao .descricao__acesso {
+    display: inline-block;
+    width: auto;
+    padding: 4px 20px;
+  }
+  .descricao .descricao__titulo {
+    margin: 24px auto 0;
+    width: 80%;
+    font-size: 3rem;
+    width: 65%;
+    line-height: 60px;
+  }
+  .descricao .descricao__texto {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1220px) {
+  main {
+    display: flex;
+    margin: 6em 0 0;
+  }
+  main .descricao {
+    text-align: start;
+  }
+  main .descricao .descricao__acesso {
+    margin: 0;
+    width: auto;
+    padding: 4px 24px;
+  }
+  main .descricao .descricao__titulo {
+    margin: 24px auto 24px 0;
+    width: 90%;
+    text-align: start;
+    font-size: 3rem;
+  }
+  main .descricao .descricao__texto {
+    margin: 0 auto 0 0;
+    width: 90%;
+    text-align: start;
+  }
+  main img {
+    display: inline-block;
+    width: 30%;
+  }
+}
+form {
+  text-align: center;
+  padding-top: 1em;
+}
+form input {
+  margin: 1em auto 0.5em;
+  width: 90%;
+  display: block;
+  padding: 1em 0;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+}
+form input::-moz-placeholder {
+  padding-left: 1.5em;
+  color: #B6B6B6;
+}
+form input::placeholder {
+  padding-left: 1.5em;
+  color: #B6B6B6;
+}
+form button {
+  margin: 0 auto 0;
+  width: 90%;
+  padding: 1em 0;
+  background-color: #372865;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    margin: 0 auto 0;
+    width: 65%;
+    text-align: start;
+  }
+  form input {
+    display: inline;
+    width: 65%;
+    margin: 1em 0.5em 0 0;
+    padding: 1.5em 0;
+  }
+  form input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  form input::placeholder {
+    font-size: 1rem;
+  }
+  form button {
+    width: 30%;
+    padding: 18px 0;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1220px) {
+  form {
+    text-align: start;
+    width: 90%;
+    margin: 0 auto 0 0;
+  }
+  form input {
+    width: 50%;
+    margin: 0 1em 0 0;
+  }
+  form button {
+    width: 20%;
+  }
+}
+footer {
+  margin: 0 auto 0;
+  width: 90%;
+}
+footer p {
+  font-weight: 700;
+  color: #545454;
+  margin: 2em 0 1em;
+}
+footer div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}/*# sourceMappingURL=style.css.map */

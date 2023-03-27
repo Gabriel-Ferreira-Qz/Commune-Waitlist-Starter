@@ -1,0 +1,79 @@
+@import '../abstract/_variaveis'
+
+@mixin link ($link-cor, $decoration, $weight)
+    color: $link-cor
+    text-decoration: $decoration
+    font-weight: $weight
+
+@mixin margin-center($margin-top, $margin-bottom, $width)
+    margin: $margin-top auto $margin-bottom
+    width: $width
+main
+    .descricao
+        text-align: center
+        .descricao__acesso
+            @include margin-center(3em , 0 , 80%)
+            padding: 4px 16px
+            border-radius: 40px
+            background-color: $cor-secundaria
+            color: $cor-texto-secundario
+            font-weight: 300
+            line-height: 25px
+            a
+                @include link ($cor-texto-secundario , underline , 400 )
+        .descricao__titulo
+            @include margin-center(24px , 24px , 80%)
+            text-align: center 
+            font-size: $tamanho-da-fonte * 2.5
+            font-weight: 700
+            line-height: 45px
+            color: $cor-titulo
+        .descricao__texto
+            @include margin-center(0 , 0 , 90%) 
+            color: $cor-texto
+            line-height: 25px
+    img 
+        display: none
+
+@media screen and (min-width: $tablet)
+    .descricao
+        .descricao__acesso
+            display: inline-block
+            width: auto
+            padding: 4px 20px
+        .descricao__titulo
+            @include margin-center(24px , 0 , 80%)
+            font-size: $tamanho-da-fonte * 3
+            width: 65%
+            line-height: 60px
+        .descricao__texto
+            width: 70%
+            margin: 0 auto
+
+@media screen and (min-width: $desktop)
+    main
+        display: flex
+        margin: 6em 0 0
+        .descricao
+            text-align: start
+            .descricao__acesso
+                margin: 0
+                width: auto
+                padding: 4px 24px
+            .descricao__titulo
+                margin: 24px auto 24px 0
+                width: 90%
+                text-align: start
+                font-size: $tamanho-da-fonte * 3
+            .descricao__texto
+                margin: 0 auto 0 0 
+                width: 90%
+                text-align: start
+        img
+            display: inline-block
+            width: 30%
+
+
+
+
+    
